@@ -5,13 +5,17 @@ self.addEventListener('install', event => {
     console.log('Service Worker instalado');
 
     //Simular la instalación de un Service Worker
-    setTimeout(() => {
-        console.log('Terminando instalaciones');
-    }, 1000);
-    self.skipWaiting();
+    const instalacion = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('Terminando instalaciones :) ');
+            self.skipWaiting();
+            resolve();
+        }, 1000);
+    })
+    event.waityUntil(instalacion)
 })
 
 //Activación
 self.addEventListener('activate', event => {
-    console.log('Service Worker activado y listo para controlar la app');
+    console.log('Service Worker activado y listo para controlar la app :)');
 })

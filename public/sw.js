@@ -1,10 +1,7 @@
-//Responder con lo que contiene la solicitud
-self.addEventListener('fetch', event => {
-    console.log(event)
-})
-//Interceptar solicitud
-self.addEventListener('fetch', event => {
-    if (event.request.url.includes('boston1')) {
-        event.respondWith(fetch('logo512.png'))
-    }
+//Intalación
+self.addEventListener('install', event => {
+    //Descargar assets
+    //Crear cache
+    console.log('Service Worker instalado');
+
 })

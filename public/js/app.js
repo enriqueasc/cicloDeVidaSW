@@ -1,5 +1,8 @@
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('Service Worker registrado'))
-        .catch(err => console.error('SW no registrado', err))
+
+
 }
+fetch('https://fakestoreapi.com/products/1')
+    .then(resp => resp.json())
+    .then(console.log)

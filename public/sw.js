@@ -3,8 +3,12 @@ self.addEventListener('install', event => {
     //Descargar assets
     //Crear cache
     console.log('Service Worker instalado');
-    self.skipWaiting();
 
+    //Simular la instalación de un Service Worker
+    setTimeout(() => {
+        console.log('Terminando instalaciones');
+    }, 1000);
+    self.skipWaiting();
 })
 
 //Activación

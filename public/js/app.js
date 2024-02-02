@@ -3,7 +3,7 @@ if (navigator.serviceWorker) {
     // .then(reg => {
     //     Notification.requestPermission().then(result => {
     //         console.log(result);
-    //         reg.showNotification('Hola Mundo');
+    //         reg.showNotification('Hola desde mi notificación!');
     //     });
     // })
     // .catch(error => {

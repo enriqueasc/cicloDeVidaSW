@@ -23,10 +23,11 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', function (event) {
 
 
-    console.log('SW:', event.request.url);
-    //Aplicar estrategias del cache
-    if (event.request.url.includes('https://fakestoreapi.com/products/')) {
-        const resp = new Response(`{"ok": false, "mensaje": "Interceptado por el SW"}`);
-        event.respondWith(resp)
-    }
+
+});
+//Sync: Recuperamos la conexión a internet
+self.addEventListener('sync', function (event) {
+    console.log('Tenemos conexión!');
+    console.log(event);
+    console.log(event.tag);
 });

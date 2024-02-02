@@ -1,10 +1,12 @@
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/sw.js')
     // .then(reg => {
-    //     setTimeout(() => {
-    //         reg.sync.register('enviar-fotos')
-    //         console.log('Se enviaron las fotos al server')
-    //     }, 3000)
+    //     Notification.requestPermission().then(result => {
+    //         console.log(result);
+    //         reg.showNotification('Hola Mundo');
+    //     });
     // })
-    // .catch(err => console.log(err))
+    // .catch(error => {
+    //     console.error('Error al registrar el service worker:', error);
+    // });
 }

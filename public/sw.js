@@ -1,7 +1,7 @@
-//Intalación
+//Proceso de fIntalación
 self.addEventListener('install', event => {
-    //Descargar assets
-    //Crear cache
+    //Descargar los assets
+    //y crear cache
     console.log('Service Worker instalado');
 
 })
